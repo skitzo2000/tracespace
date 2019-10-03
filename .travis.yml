@@ -2,14 +2,14 @@
 
 language: node_js
 
-# lts/carbon used as default in explicit job entries
+# Node v12 used as default in explicit job entries
 node_js:
-  - 'lts/carbon'
-  - 'lts/dubnium'
-  - node
+  - 12
+  - 10
+  - 8
 
 script:
-  - yarn test
+  - yarn run test
   - yarn run coverage:upload
 
 cache:
@@ -29,10 +29,10 @@ jobs:
   include:
     - # lint and typecheck
       stage: test
-      name: Lint and typecheck
+      name: Lint and format check
       script:
         - yarn run lint
-        - yarn run check
+        - yarn run format --check
 
     - # test that asset builds all work
       stage: test
