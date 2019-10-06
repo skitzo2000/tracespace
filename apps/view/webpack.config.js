@@ -72,7 +72,6 @@ module.exports = merge(baseConfig(__dirname), {
   },
   plugins: [
     new EnvironmentPlugin({
-      MIXPANEL_ID: null,
       PKG_VERSION: pkg.version,
       PKG_REPOSITORY_URL: pkg.repository.url,
       PKG_AUTHOR_NAME: pkg.author.name,

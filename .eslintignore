@@ -14,3 +14,4 @@ packages/renderer/lib
 CHANGELOG.md
 **/package.json
 package-lock.json
+.vscode

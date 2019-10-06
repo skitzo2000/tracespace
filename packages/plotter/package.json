@@ -1,7 +1,7 @@
 {
   "name": "@tracespace/plotter",
   "private": true,
-  "version": "4.0.2",
+  "version": "4.1.1",
   "description": "Build abstract board images from @tracespace/parser ASTs",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/tracespace/tracespace#readme",
   "dependencies": {
-    "@tracespace/parser": "file:../parser",
+    "@tracespace/parser": "^4.1.1",
     "@types/lodash.padend": "^4.6.6",
     "@types/lodash.padstart": "^4.6.6",
     "lodash.padend": "^4.6.1",
@@ -39,6 +39,6 @@
     "unist-util-filter": "^1.0.2",
     "unist-util-find": "^1.0.1",
     "unist-util-visit-parents": "^3.0.0",
-    "whats-that-gerber": "file:../whats-that-gerber"
+    "whats-that-gerber": "^4.1.1"
   }
 }

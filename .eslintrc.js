@@ -46,18 +46,14 @@ module.exports = {
         'prettier/@typescript-eslint',
       ],
       rules: {
-        'no-dupe-class-members': 'off',
-        'no-redeclare': 'off',
+        // TODO(mc, 2019-10-07): remove this rule override with switch to worker-plugin
         'no-useless-constructor': 'off',
-        'import/export': 'off',
-        '@typescript-eslint/ban-ts-ignore': 'warn',
         '@typescript-eslint/camelcase': 'off',
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/explicit-function-return-type': [
           'warn',
           {allowExpressions: true},
         ],
-        '@typescript-eslint/no-inferrable-types': 'warn',
         '@typescript-eslint/no-unused-vars': [
           'error',
           {ignoreRestSiblings: true, argsIgnorePattern: '^_'},
@@ -66,8 +62,13 @@ module.exports = {
           'error',
           {functions: false, typedefs: false},
         ],
-        '@typescript-eslint/prefer-interface': 'off',
-        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+    {
+      files: ['**/*.d.ts'],
+      rules: {
+        'no-redeclare': 'off',
+        'no-dupe-class-members': 'off',
       },
     },
   ],
